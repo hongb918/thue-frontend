@@ -25,6 +25,8 @@ function ProductPage() {
             search: `?${createSearchParams(params)}`
         })
     }
+
+    
     useEffect(() => {
         dispatch(listProductDetails(productId.id))
     }, [dispatch, productId])

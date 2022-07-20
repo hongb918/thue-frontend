@@ -20,7 +20,7 @@ function CartPage() {
         if (id.productId) {
             dispatch(addToCart(id.productId, qty))
         }
-    }, [dispatch, id.productId])
+    }, [dispatch, id.productId, qty])
 
     const removeFromCartHandler = (id) => {
         dispatch(removeFromCart(id))
@@ -107,8 +107,6 @@ function CartPage() {
                             Proceed To Checkout
                         </Button>
                     </ListGroup.Item>
-
-
                 </Card>
             </Col>
         </Row>
