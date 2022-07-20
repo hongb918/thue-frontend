@@ -6,7 +6,8 @@ import Header from './components/Header'
 
 import ProductPage from './pages/ProductPage'
 import HomePage from './pages/HomePage'
-
+import CartPage from './pages/CartPage'
+import LoginPage from './pages/LoginPage'
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           <Routes>
             <Route exact path='/' element={<HomePage />} />
             <Route exact path='/products/:id' element={< ProductPage />} />
+            <Route exact path='/cart' element={< CartPage />} />
+            <Route exact path='/cart/:productId' element={< CartPage />} />
+            <Route exact path='/login' element={< LoginPage />} />
           </Routes>
         </Container>
       </main>
