@@ -4,21 +4,23 @@ import { composeWithDevTools } from '@redux-devtools/extension'
 // import { configureStore } from '@reduxjs/toolkit'
 import { productListReducers, productDetailReducers } from './reducers/productReducers'
 import { cartReducer } from './reducers/cartReducers'
-import { userLoginReducer, userRegisterReducer, userDetailsReducer, userUpdateProfileReducer } from './reducers/userReducers'
-import { orderCreateReducer, orderDetailsReducer, orderPayReducer} from './reducers/orderReducers'
+import { userLoginReducer, userRegisterReducer, userDetailsReducer, userUpdateProfileReducer, userListReducer, userDeleteReducer } from './reducers/userReducers'
+import { orderCreateReducer, orderDetailsReducer, orderPayReducer, orderListMyReducer } from './reducers/orderReducers'
 
 const reducer = combineReducers({
     productList: productListReducers,
     productDetails: productDetailReducers,
     cart: cartReducer,
-    userLogin:userLoginReducer,
+    userLogin: userLoginReducer,
     userRegister: userRegisterReducer,
     userDetails: userDetailsReducer,
     userUpdateProfile: userUpdateProfileReducer,
+    userList: userListReducer,
+    userDelete: userDeleteReducer,
     orderCreate: orderCreateReducer,
     orderDetails: orderDetailsReducer,
     orderPay: orderPayReducer,
-    
+    orderListMy: orderListMyReducer
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ?
