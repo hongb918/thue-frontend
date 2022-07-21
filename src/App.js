@@ -13,7 +13,7 @@ import ProfilePage from './pages/ProfilePage'
 import ShippingPage from './pages/ShippingPage'
 import PaymentPage from './pages/PaymentPage'
 import PlaceOrderPage from './pages/PlaceOrderPage'
-// import { login } from './actions/userActions'
+
 
 function App() {
   return (
@@ -27,7 +27,6 @@ function App() {
             <Route exact path='/register' element={< RegisterPage />} />
             <Route exact path='/profile' element={< ProfilePage />} />
 
-
             <Route
               path="/login/shipping"
               element={<Navigate to="/shipping" />}
@@ -39,7 +38,7 @@ function App() {
             <Route exact path='/cart' element={< CartPage />} />
             <Route exact path='/products/:id' element={< ProductPage />} />
             <Route exact path='/cart/:productId' element={< CartPage />} />
-            {/* <Route exact path='*' element={< ErrorPage />} /> */}
+
           </Routes>
         </Container>
       </main>

@@ -7,7 +7,8 @@ import Message from '../components/Message'
 import { createOrder } from '../actions/orderActions'
 import { ORDER_CREATE_RESET } from '../constants/orderConstants'
 
-function PlaceOrderPage({ history }) {
+
+function PlaceOrderPage() {
     // const payment = useParams()
     const orderCreate = useSelector(state => state.orderCreate)
     const { order, error, success} = orderCreate
@@ -25,18 +26,25 @@ function PlaceOrderPage({ history }) {
     cart.totalPrice = (Number(cart.itemsPrice) + Number(cart.shippingPrice) + Number(cart.taxPrice)).toFixed(2)
 
     if (!cart.paymentMethod) {
-        // history.push('/payment')
         navigate('/payment')
     }
+
+    // useEffect(() => {
+    //     if (orderCreate.success) {
+    //         navigate(`/order/${order._id}`)
+    //     }
+    // }, [dispatch, navigate, order._id, orderCreate.success])
 
     useEffect(() => {
         if (success) {
             navigate(`/order/${order._id}`)
-            dispatch({ type: ORDER_CREATE_RESET })
-        } 
-    }, [success, navigate, dispatch, order._id])
+            dispatch({type: ORDER_CREATE_RESET})
+        }
+        
+    }, [success, navigate, dispatch]);
 
     const placeOrder = () => {
+        console.log('Order placed')
         dispatch(createOrder({
             orderItems: cart.cartItems,
             shippingAddress: cart.shippingAddress,
@@ -89,7 +97,7 @@ function PlaceOrderPage({ history }) {
                                                 </Col>
 
                                                 <Col>
-                                                    <Link to={`/product/${item.product}`}>{item.name}</Link>
+                                                    <Link to={`/products/${item.product}`}>{item.name}</Link>
                                                 </Col>
 
                                                 <Col md={4}>
@@ -138,6 +146,7 @@ function PlaceOrderPage({ history }) {
                                     <Col>${cart.totalPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
+
                             <ListGroup.Item>
                                 {error && <Message variant='danger'>{error}</Message>}
                             </ListGroup.Item>
@@ -145,7 +154,7 @@ function PlaceOrderPage({ history }) {
                             <ListGroup.Item>
                                 <Button
                                     type='button'
-                                    className='btn-block'
+                                    className='btn-block primary'
                                     disabled={cart.cartItems === 0}
                                     onClick={placeOrder}
                                 >
@@ -162,3 +171,13 @@ function PlaceOrderPage({ history }) {
 }
 
 export default PlaceOrderPage
+
+// import React from 'react'
+
+// function PlaceOrderPage() {
+//     return (
+//         <div>PlaceOrderPage</div>
+//     )
+// }
+
+// export default PlaceOrderPage
