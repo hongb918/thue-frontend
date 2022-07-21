@@ -13,6 +13,7 @@ import ProfilePage from './pages/ProfilePage'
 import ShippingPage from './pages/ShippingPage'
 import PaymentPage from './pages/PaymentPage'
 import PlaceOrderPage from './pages/PlaceOrderPage'
+import OrderPage from './pages/OrderPage'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
             <Route exact path='/cart' element={< CartPage />} />
             <Route exact path='/products/:id' element={< ProductPage />} />
             <Route exact path='/cart/:productId' element={< CartPage />} />
+            <Route exact path='/order/:id' element={< OrderPage />} />
 
           </Routes>
         </Container>

@@ -29,12 +29,6 @@ function PlaceOrderPage() {
         navigate('/payment')
     }
 
-    // useEffect(() => {
-    //     if (orderCreate.success) {
-    //         navigate(`/order/${order._id}`)
-    //     }
-    // }, [dispatch, navigate, order._id, orderCreate.success])
-
     useEffect(() => {
         if (success) {
             navigate(`/order/${order._id}`)
