@@ -23,7 +23,7 @@ function OrderPage() {
             dispatch(getOrderDetails(orderId.id))
             // console.log(orderId.id)
         }
-    }, [order, orderId])
+    }, [dispatch, order, orderId])
 
 
 
