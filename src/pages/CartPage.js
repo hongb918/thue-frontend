@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link, useParams, useNavigate, useLocation } from 'react-router-dom'
+import { Link, useParams, useNavigate, useLocation  } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
@@ -13,7 +13,7 @@ function CartPage() {
     const navigate = useNavigate()
     const cart = useSelector(state => state.cart)
     const { cartItems } = cart
-    console.log('cartscreen: id: ', id)
+    // console.log('cartscreen: id: ', id)
 
     
     useEffect(() => {
@@ -26,8 +26,10 @@ function CartPage() {
         dispatch(removeFromCart(id))
     }
 
+
     const checkoutHandler = () => {
-        navigate('/login?redirect=shipping')
+        navigate('/login?redirect=shipping'
+        )  
     }
 
     return (
