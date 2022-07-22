@@ -27,3 +27,47 @@ h3 {
 h2 {
   text-align: center;
 }
+
+
+/* carousel */
+
+.carousel-container {
+  background-color: rgba(160, 176, 162, 0.36);
+  margin: 2rem 0
+}
+
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h4 {
+  color: rgb(113, 125, 130);
+}
+
+.carousel img {
+  display:block;
+  height: 80vh;
+  padding: 30px;
+  margin: 40px;
+  /* border-top-left-radius: 500%; */
+  border-top-right-radius: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel a {
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
+}
+
+

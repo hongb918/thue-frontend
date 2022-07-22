@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap'
 import { logout } from '../actions/userActions'
-
+import SearchBox from './SearchBox';
 
 function Header() {
     const dispatch = useDispatch()
@@ -78,10 +78,14 @@ function Header() {
                                 </NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
-                        <form class="d-flex">
+
+                        <SearchBox />
+
+                        {/* <form class="d-flex">
                             <input class="form-control me-sm-2" type="text" placeholder="Search" />
                             <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                        </form>
+                        </form> */}
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
