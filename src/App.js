@@ -15,7 +15,7 @@ import PaymentPage from './pages/PaymentPage'
 import PlaceOrderPage from './pages/PlaceOrderPage'
 import OrderPage from './pages/OrderPage'
 import UserListPage from './pages/UserListPage'
-// import UserEditPage from './pages/UserEditPage'
+import UserEditPage from './pages/UserEditPage'
 
 
 function App() {
@@ -44,7 +44,7 @@ function App() {
             <Route exact path='/order/:id' element={< OrderPage />} />
 
             <Route exact path='/admin/userlist' element={< UserListPage />} />
-            {/* <Route exact path='/admin/user/:id/edit' element={< UserEditPage />} /> */}
+            <Route exact path='/admin/user/:id/edit' element={< UserEditPage />} />
 
           </Routes>
         </Container>
