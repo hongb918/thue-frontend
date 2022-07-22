@@ -67,7 +67,7 @@ function ProfilePage() {
     // console.log(orders)
     return (
         <Row>
-            <Col md={4}>
+            <Col md={3}>
                 <h1>Update Profile</h1>
                 {message && <Message variant='danger'>{message}</Message>}
                 {error && <Message variant='danger'>{error}</Message>}
@@ -127,7 +127,7 @@ function ProfilePage() {
 
             </Col>
             {/* RIGHT SIDE MYORDERS */}
-            <Col md={5}>
+            <Col md={5} >
                 <h2>My Orders</h2>
                 {loadingOrders ? (
                     <Loader />
