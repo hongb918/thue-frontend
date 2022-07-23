@@ -22,10 +22,8 @@ import SplashPage from './pages/SplashPage'
 
 
 function App() {
-  
-  App.get('/favicon.ico', (req, res) => {
-    res.send('favicon found');
-  })
+
+
 
   return (
     <div className='App'>
@@ -42,6 +40,10 @@ function App() {
             <Route
               path="/thue/login/shipping"
               element={<Navigate to="/thue/shipping" />}
+            />
+            <Route
+              path="/favicon.ico"
+              element={<Navigate to="/" />}
             />
 
             <Route exact path='/thue/shipping' element={< ShippingPage />} />
