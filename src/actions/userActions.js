@@ -49,7 +49,7 @@ export const login = (email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            'http://localhost:8000/api/users/login/',
+            'https://arcane-mountain-49926.herokuapp.com/api/users/login/',
             { 'username': email, 'password': password },
             config
         )
@@ -94,7 +94,7 @@ export const register = (name, email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            'http://localhost:8000/api/users/register/',
+            'https://arcane-mountain-49926.herokuapp.com/api/users/register/',
             { 'name': name, 'email': email, 'password': password },
             config
         )
@@ -139,7 +139,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `http://localhost:8000/api/users/${id}/`,
+            `https://arcane-mountain-49926.herokuapp.com/api/users/${id}/`,
             config
         )
 
@@ -177,7 +177,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `http://localhost:8000/api/users/profile/update/`,
+            `https://arcane-mountain-49926.herokuapp.com/api/users/profile/update/`,
             user,
             config
         )
@@ -222,7 +222,7 @@ export const listUsers = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `http://localhost:8000/api/users/`,
+            `https://arcane-mountain-49926.herokuapp.com/api/users/`,
             config
         )
 
@@ -260,7 +260,7 @@ export const deleteUser = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.delete(
-            `http://localhost:8000/api/users/delete/${id}/`,
+            `https://arcane-mountain-49926.herokuapp.com/api/users/delete/${id}/`,
             config
         )
 
@@ -298,7 +298,7 @@ export const updateUser = (user) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `http://localhost:8000/api/users/update/${user._id}/`,
+            `https://arcane-mountain-49926.herokuapp.com/api/users/update/${user._id}/`,
             user,
             config
         )

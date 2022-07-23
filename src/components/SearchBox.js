@@ -1,23 +1,26 @@
 import React, {useState} from 'react'
 import { Button, Form, FormControl } from 'react-bootstrap'
 import { useNavigate, useLocation } from 'react-router-dom'
-
+import { useDispatch } from 'react-redux'
+import { searchProducts, listProducts } from '../actions/productActions'
 function SearchBox() {
 
-    const navigate = useNavigate()
-    const location = useLocation()
+
     const [keyword, setKeyword] = useState('')
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     const submitHanldler = (e) => {
         e.preventDefault()
         if (keyword) {
             navigate(`/?keyword=${keyword}`)
+            dispatch(searchProducts(keyword))
+            console.log(keyword)
         } else {
-            navigate(navigate(location.pathname))
+            console.error('Please enter keyword')
         }
     }
-
-
 
     return (
         <Form onSubmit={submitHanldler} className="d-flex" >

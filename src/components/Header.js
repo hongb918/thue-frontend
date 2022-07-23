@@ -23,9 +23,7 @@ function Header() {
         <header>
             <Navbar bg="light" expand="lg">
                 <Container>
-                    <LinkContainer to='/'>
-                        <Navbar.Brand >Thuê</Navbar.Brand>
-                    </LinkContainer>
+
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
@@ -66,7 +64,8 @@ function Header() {
                                 <Nav.Link><i className='fas fa-shopping-cart'></i></Nav.Link>
                             </LinkContainer>
                             <br />
-                            <NavDropdown title="Rooms" id="basic-nav-dropdown">
+
+                            {/* <NavDropdown title="Rooms" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">
                                     Another action
@@ -76,9 +75,11 @@ function Header() {
                                 <NavDropdown.Item href="#action/3.4">
                                     Separated link
                                 </NavDropdown.Item>
-                            </NavDropdown>
+                            </NavDropdown> */}
                         </Nav>
-
+                        <LinkContainer to='/'>
+                            <Navbar.Brand>Thuê</Navbar.Brand>
+                        </LinkContainer>
                         <SearchBox />
 
                         {/* <form class="d-flex">
