@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  ![relaxing](https://user-images.githubusercontent.com/95890211/180605320-0b3e6e88-4392-4437-972a-96677decd0bb.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    <img src="[relaxing](https://user-images.githubusercontent.com/95890211/180605320-0b3e6e88-4392-4437-972a-96677decd0bb.png)" alt="Logo" width="80" height="80">
+  
 
-## Available Scripts
+  <h3 align="center">Thue</h3>
 
-In the project directory, you can run:
+  <p align="center">
+    E-commerce website for those who are looking to shop for their furniture online!
+  </p>
+</div>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Screen Shot 2022-07-23 at 7 47 18 AM](https://user-images.githubusercontent.com/95890211/180607331-f8cfa007-fe62-48e3-95bd-439d50f97aff.png)
 
-### `npm run eject`
+An e-commerce web application built with Django and React. This site allows users to shop and view products, and register/login in order to complete payment transaction.  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Built With
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* [![Django][Django]][Django-url]
+* [![React][React.js]][React-url]
+* [![Python][Python]][Python-url]
+* [![PostGres][PostGres]][PostGres-url]
+* [![JWT][JWT.io][JWT-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![PayPal][React-Paypal.js]][Paypal-url]
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- GETTING STARTED -->
+## Getting Started
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Prerequisites
 
-### Analyzing the Bundle Size
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Installation
 
-### Making a Progressive Web App
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+<!-- USAGE EXAMPLES -->
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+View Product List and Product Details
+![splash](https://user-images.githubusercontent.com/95890211/180605938-5e521f3e-c5c4-445a-bee7-9716223072d3.gif)
 
-### `npm run build` fails to minify
+Adding to Cart 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+CRUD
+![Screen Shot 2022-07-23 at 8 26 08 AM](https://user-images.githubusercontent.com/95890211/180607369-faaa61a1-7687-408c-a05b-201ebad7a0d7.png)
+![Screen Shot 2022-07-23 at 8 26 38 AM](https://user-images.githubusercontent.com/95890211/180607374-b3290819-bf6f-44c9-91bb-17240def20d3.png)
+![user_crud](https://user-images.githubusercontent.com/95890211/180607380-80f96b73-4b79-4b35-9175-df2b5bc22929.gif)
+
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+- [x] Redux
+- [x] JWT
+- [x] Paypal
+- [x] Full CRUD functionality on frontend + backend
+- [x] Product Carousel
+- [ ] SearchBar
+- [ ] Filter by Rooms
+- [ ] Flatpickr
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- CONTACT -->
+## Contact
+
+Hong Bui - [@hong-bui918]([https://www.linkedin.com/in/hong-bui918/]) - 
+
+Project Link: [https://github.com/hongb918/thue-frontend/](https://github.com/hongb918/thue-frontend/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
