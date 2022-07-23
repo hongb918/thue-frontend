@@ -22,6 +22,11 @@ import SplashPage from './pages/SplashPage'
 
 
 function App() {
+  
+  App.get('/favicon.ico', (req, res) => {
+    res.send('favicon found');
+  })
+
   return (
     <div className='App'>
       <Header />
