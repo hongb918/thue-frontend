@@ -2,7 +2,7 @@
 <br />
 <div align="center">
 
-
+#top
 ![Logo](https://user-images.githubusercontent.com/95890211/180608013-ed2fa817-9498-414a-8b1a-a00e5f993718.png)
     
   
@@ -36,7 +36,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#resources">Resources</a></li>
   </ol>
 </details>
 
@@ -98,8 +98,13 @@ This is an example of how to list things you need to use the software and how to
 
 View Product List and Product Details
 ![splash](https://user-images.githubusercontent.com/95890211/180605938-5e521f3e-c5c4-445a-bee7-9716223072d3.gif)
-
+Home
+![home](https://user-images.githubusercontent.com/95890211/180614653-3b6cc8e5-4cdd-44e4-b90e-91eb953326bb.gif)
 Adding to Cart 
+![productdetails](https://user-images.githubusercontent.com/95890211/180614666-ee733c2c-87f4-41e3-b88f-fcd3c374d37c.gif)
+Placeorder --> PayPal
+![step1-3](https://user-images.githubusercontent.com/95890211/180614673-09aeb461-2ced-4278-98e4-f51e24ed4819.gif)
+User Profile / MyOrders 
 
 CRUD
 ![Screen Shot 2022-07-23 at 8 26 08 AM](https://user-images.githubusercontent.com/95890211/180607369-faaa61a1-7687-408c-a05b-201ebad7a0d7.png)
