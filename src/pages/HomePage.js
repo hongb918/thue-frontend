@@ -2,35 +2,36 @@ import React, { useEffect } from 'react'
 import Product from '../components/Product'
 import { Row, Col } from 'react-bootstrap'
 // import axios from 'axios'
+import { useNavigate, useLocation, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { listProducts } from '../actions/productActions'
+import { listProducts, searchProducts } from '../actions/productActions'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import ProductCarousel from '../components/ProductCarousel'
 
 function HomePage() {
     // const [products, setProducts] = useState([])
-
+    const navigate = useNavigate()
+    const location = useLocation()
     const dispatch = useDispatch()
+    const keyword = useParams()
+
     const productList = useSelector(state => state.productList)
 
     const { error, loading, products } = productList
 
     useEffect(() => {
-        // async function fetchProducts() {
-        //     const { data } = await axios.get('http://localhost:8000/api/products/')
-        //     setProducts(data)
-        // }
-
-        // fetchProducts()
-        dispatch(listProducts())
-
+            dispatch(listProducts())
     }, [dispatch])
 
     return (
         <div>
+            {/* {!keyword && <ProductCarousel />} */}
+
+            <ProductCarousel />
             <h1> Shop the Look </h1>
             {loading ? <Loader />
-                : error ? <Message variant='danger'>{error}</Message>   
+                : error ? <Message variant='danger'>{error}</Message>
                     :
                     <Row>
                         {products.map(product => (

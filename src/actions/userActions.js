@@ -28,6 +28,11 @@ import {
     USER_DELETE_REQUEST,
     USER_DELETE_SUCCESS,
     USER_DELETE_FAIL,
+
+    USER_UPDATE_REQUEST,
+    USER_UPDATE_SUCCESS,
+    USER_UPDATE_FAIL,
+
 } from '../constants/userConstants'
 
 import { ORDER_LIST_MY_RESET } from '../constants/orderConstants'
@@ -44,7 +49,7 @@ export const login = (email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            'http://localhost:8000/api/users/login/',
+            'https://arcane-mountain-49926.herokuapp.com/api/users/login/',
             { 'username': email, 'password': password },
             config
         )
@@ -89,7 +94,7 @@ export const register = (name, email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            'http://localhost:8000/api/users/register/',
+            'https://arcane-mountain-49926.herokuapp.com/api/users/register/',
             { 'name': name, 'email': email, 'password': password },
             config
         )
@@ -134,7 +139,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `http://localhost:8000/api/users/${id}/`,
+            `https://arcane-mountain-49926.herokuapp.com/api/users/${id}/`,
             config
         )
 
@@ -172,7 +177,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `http://localhost:8000/api/users/profile/update/`,
+            `https://arcane-mountain-49926.herokuapp.com/api/users/profile/update/`,
             user,
             config
         )
@@ -217,7 +222,7 @@ export const listUsers = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `http://localhost:8000/api/users/`,
+            `https://arcane-mountain-49926.herokuapp.com/api/users/`,
             config
         )
 
@@ -255,7 +260,7 @@ export const deleteUser = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.delete(
-            `http://localhost:8000/api/users/delete/${id}/`,
+            `https://arcane-mountain-49926.herokuapp.com/api/users/delete/${id}/`,
             config
         )
 
@@ -268,6 +273,49 @@ export const deleteUser = (id) => async (dispatch, getState) => {
     } catch (error) {
         dispatch({
             type: USER_DELETE_FAIL,
+            payload: error.response && error.response.data.detail
+                ? error.response.data.detail
+                : error.message,
+        })
+    }
+}
+
+export const updateUser = (user) => async (dispatch, getState) => {
+    try {
+        dispatch({
+            type: USER_UPDATE_REQUEST
+        })
+
+        const {
+            userLogin: { userInfo },
+        } = getState()
+
+        const config = {
+            headers: {
+                'Content-type': 'application/json',
+                Authorization: `Bearer ${userInfo.token}`
+            }
+        }
+
+        const { data } = await axios.put(
+            `https://arcane-mountain-49926.herokuapp.com/api/users/update/${user._id}/`,
+            user,
+            config
+        )
+
+        dispatch({
+            type: USER_UPDATE_SUCCESS,
+        })
+
+        dispatch({
+            type: USER_DETAILS_SUCCESS,
+            payload: data
+        })
+
+
+    } catch (error) {
+        dispatch({
+            type: USER_UPDATE_FAIL,
             payload: error.response && error.response.data.detail
                 ? error.response.data.detail
                 : error.message,
