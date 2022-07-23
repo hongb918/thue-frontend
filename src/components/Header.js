@@ -29,7 +29,7 @@ function Header() {
                         <Nav className="me-auto">
                             {userInfo ? (
                                 <NavDropdown title={userInfo.name} id='username'>
-                                    <LinkContainer to='/profile'>
+                                    <LinkContainer to='/thue/profile'>
                                         <NavDropdown.Item>Profile</NavDropdown.Item>
                                     </LinkContainer>
 
@@ -37,22 +37,22 @@ function Header() {
 
                                 </NavDropdown>
                             ) : (
-                                <LinkContainer to='/login'>
+                                <LinkContainer to='/thue/login'>
                                     <Nav.Link><i className="fas fa-user"></i>Login</Nav.Link>
                                 </LinkContainer>
                             )}
                             {/* drop down for admin sites, only visible to admins */}
                             {userInfo && userInfo.isAdmin && (
                                 <NavDropdown title='Admin' id='adminmenue'>
-                                    <LinkContainer to='/admin/userlist'>
+                                    <LinkContainer to='/thue/admin/userlist'>
                                         <NavDropdown.Item>Users</NavDropdown.Item>
                                     </LinkContainer>
 
-                                    <LinkContainer to='/admin/productlist'>
+                                    <LinkContainer to='/thue/admin/productlist'>
                                         <NavDropdown.Item>Products</NavDropdown.Item>
                                     </LinkContainer>
 
-                                    <LinkContainer to='/admin/orderlist'>
+                                    <LinkContainer to='/thue/admin/orderlist'>
                                         <NavDropdown.Item>Orders</NavDropdown.Item>
                                     </LinkContainer>
 
@@ -60,7 +60,7 @@ function Header() {
                             )}
                             
 
-                            <LinkContainer to='/cart'>
+                            <LinkContainer to='/thue/cart'>
                                 <Nav.Link><i className='fas fa-shopping-cart'></i></Nav.Link>
                             </LinkContainer>
                             <br />
@@ -77,8 +77,8 @@ function Header() {
                                 </NavDropdown.Item>
                             </NavDropdown> */}
                         </Nav>
-                        <LinkContainer to='/'>
-                            <Navbar.Brand>Thuê</Navbar.Brand>
+                        <LinkContainer to='/thue'>
+                            <Navbar.Brand className='brand'><h3>Thuê</h3></Navbar.Brand>
                         </LinkContainer>
                         <SearchBox />
 

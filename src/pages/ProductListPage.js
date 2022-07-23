@@ -34,11 +34,11 @@ function ProductListScreen() {
         dispatch({ type: PRODUCT_CREATE_RESET })
 
         if (!userInfo.isAdmin) {
-            navigate('/login')
+            navigate('/thue/login')
         }
 
         if (successCreate) {
-            navigate(`/admin/product/${createdProduct._id}/edit`)
+            navigate(`/thue/admin/product/${createdProduct._id}/edit`)
         } else {
             dispatch(listProducts(keyword))
         }
@@ -66,7 +66,7 @@ function ProductListScreen() {
                 </Col>
 
                 <Col className='text-right'>
-                    <Button className='my-3' onClick={createProductHandler}>
+                    <Button className='my-4 btn-sm btn-bottom btn-create' onClick={createProductHandler}>
                         <i className='fas fa-plus'></i> Create Product
                     </Button>
                 </Col>
@@ -92,8 +92,6 @@ function ProductListScreen() {
                                         <th>NAME</th>
                                         <th>PRICE</th>
                                         <th>CATEGORY</th>
-                                        <th>BRAND</th>
-                                        <th></th>
                                     </tr>
                                 </thead>
 
@@ -107,7 +105,7 @@ function ProductListScreen() {
                                             <td>{product.brand}</td>
 
                                             <td>
-                                                <LinkContainer to={`/admin/product/${product._id}/edit`}>
+                                                <LinkContainer to={`/thue/admin/product/${product._id}/edit`}>
                                                     <Button variant='light' className='btn-sm'>
                                                         <i className='fas fa-edit'></i>
                                                     </Button>

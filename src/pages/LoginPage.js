@@ -16,7 +16,7 @@ function LoginPage() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const redirect = location.search ? location.search.split('=')[1] : '/'
+    const redirect = location.search ? location.search.split('=')[1] : '/thue'
 
     const userLogin = useSelector(state => state.userLogin)
     const { error, loading, userInfo} = userLogin
@@ -72,7 +72,7 @@ function LoginPage() {
             <Row className='py-3'>
                 <Col>
                     New Customer? <Link
-                        to={redirect ? `/register?redirect=${redirect}` : '/register'}>
+                        to={redirect ? `/thue/register?redirect=${redirect}` : '/thue/register'}>
                         Register
                     </Link>
                 </Col>

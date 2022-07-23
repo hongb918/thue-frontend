@@ -29,7 +29,7 @@ function UserEditPage() {
     useEffect(() => {
         if (successUpdate) {
             dispatch({ type: USER_UPDATE_RESET })
-            navigate('/admin/userlist')
+            navigate('/thue/admin/userlist')
         } else {
             if (!user.name || user._id !== Number(userId.id)) {
                 dispatch(getUserDetails(userId.id))
@@ -49,7 +49,7 @@ function UserEditPage() {
 
     return (
         <div>
-            <Link to='/admin/userlist'>
+            <Link to='/thue/admin/userlist'>
                 <Button className='btn btn-outline-light' data-bs-placement="right">
                     Go Back
                 </Button>
@@ -96,7 +96,7 @@ function UserEditPage() {
                                 </Form.Check>
                             </Form.Group>
 
-                            <Button type='submit' variant='primary'>
+                            <Button type='submit' variant='primary' className='btn btn-success btn-bottom'>
                                 Update
                             </Button>
 

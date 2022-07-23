@@ -1,7 +1,9 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-
+// import { FiGithub } from '@react-icons/fi'
 function Footer() {
+
+
     return (
         <div>
             <footer>

@@ -26,7 +26,7 @@ function UserListPage() {
         if (userInfo && userInfo.isAdmin) {
             dispatch(listUsers())
         } else {
-            navigate('/login')
+            navigate('/thue/login')
         }
 
     }, [dispatch, navigate, userInfo, successDelete])
@@ -71,7 +71,7 @@ function UserListPage() {
                                         )}</td>
 
                                         <td>
-                                            <LinkContainer to={`/admin/user/${user._id}/edit`}>
+                                            <LinkContainer to={`/thue/admin/user/${user._id}/edit`}>
                                                 <Button variant='light' className='btn-sm'>
                                                     <i className='fas fa-edit'></i>
                                                 </Button>

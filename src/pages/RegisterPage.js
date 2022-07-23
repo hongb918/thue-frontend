@@ -18,7 +18,7 @@ function RegisterPage() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const redirect = location.search ? location.search.split('=')[1] : '/'
+    const redirect = location.search ? location.search.split('=')[1] : '/thue'
 
     const userRegister = useSelector(state => state.userRegister)
     const { error, loading, userInfo } = userRegister
@@ -105,7 +105,7 @@ function RegisterPage() {
             <Row className='py-3'>
                 <Col>
                     Have an Account? <Link
-                        to={redirect ? `/login?redirect=${redirect}` : '/login'}>
+                        to={redirect ? `/thue/login?redirect=${redirect}` : '/thue/login'}>
                         Sign In
                     </Link>
                 </Col>

@@ -38,7 +38,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.post(
-            `https://arcane-mountain-49926.herokuapp.com/api/orders/add/`,
+            `http://localhost:8000/api/orders/add/`,
             order,
             config
         )
@@ -84,7 +84,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `https://arcane-mountain-49926.herokuapp.com/api/orders/${id}/`,
+            `http://localhost:8000/api/orders/${id}/`,
             config
         )
 
@@ -122,7 +122,7 @@ export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `https://arcane-mountain-49926.herokuapp.com/api/orders/${id}/pay/`,
+            `http://localhost:8000/api/orders/${id}/pay/`,
             paymentResult,
             config
         )
@@ -161,7 +161,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `https://arcane-mountain-49926.herokuapp.com/api/orders/myorders/`,
+            `http://localhost:8000/api/orders/myorders/`,
             config
         )
 

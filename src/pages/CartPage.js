@@ -28,7 +28,7 @@ function CartPage() {
 
 
     const checkoutHandler = () => {
-        navigate('/login?redirect=shipping'
+        navigate('/thue/login?redirect=shipping'
         )  
     }
 
@@ -38,7 +38,7 @@ function CartPage() {
                 <h1>Shopping Cart</h1>
                 {cartItems.length === 0 ? (
                     <Message variant='info'>
-                        Your cart is empty <Link to='/'>Go Back</Link>
+                        Your cart is empty <Link to='/thue'>Go Back</Link>
                     </Message>
                 ) : (
                     <ListGroup variant='flush'>
@@ -49,7 +49,7 @@ function CartPage() {
                                         <Image src={item.image} alt={item.name} fluid rounded />
                                     </Col>
                                     <Col md={3}>
-                                        <Link to={`/product/${item.product}`}>{item.name}</Link>
+                                        <Link to={`/thue/products/${item.product}`}>{item.name}</Link>
                                     </Col>
 
                                     <Col md={2}>

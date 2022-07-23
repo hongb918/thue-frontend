@@ -24,7 +24,7 @@ function ProductCarousel() {
                     <Carousel pause='hover' className='sm carousel-inner'>
                         {products.map(product => (
                             <Carousel.Item key={product._id} className="item">
-                                <Link to={`/products/${product._id}`}>
+                                <Link to={`/thue/products/${product._id}`}>
                                     <Image src={product.image} alt={product.name} fluid />
                                     <Carousel.Caption className='carousel.caption'>
                                         <h4>{product.name} (${product.price})</h4>

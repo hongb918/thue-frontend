@@ -35,7 +35,7 @@ export const listProducts = () => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST })
 
-        const { data } = await axios.get(`https://arcane-mountain-49926.herokuapp.com/api/products/`)
+        const { data } = await axios.get(`http://localhost:8000/api/products/`)
 
         dispatch({
             type: PRODUCT_LIST_SUCCESS,
@@ -56,7 +56,7 @@ export const searchProducts = (keyword = '') => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST })
 
-        const { data } = await axios.get(`https://arcane-mountain-49926.herokuapp.com/api/products/?q=${keyword}`)
+        const { data } = await axios.get(`http://localhost:8000/api/products/?q=${keyword}`)
 
         dispatch({
             type: PRODUCT_LIST_SUCCESS,
@@ -77,7 +77,7 @@ export const listTopProducts = () => async (dispatch) => {
         try {
             dispatch({ type: PRODUCT_TOP_REQUEST })
 
-            const { data } = await axios.get(`https://arcane-mountain-49926.herokuapp.com/api/products/top/`)
+            const { data } = await axios.get(`http://localhost:8000/api/products/top/`)
 
             dispatch({
                 type: PRODUCT_TOP_SUCCESS,
@@ -99,7 +99,7 @@ export const listTopProducts = () => async (dispatch) => {
         try {
             dispatch({ type: PRODUCT_DETAILS_REQUEST })
 
-            const { data } = await axios.get(`https://arcane-mountain-49926.herokuapp.com/api/products/${id}`)
+            const { data } = await axios.get(`http://localhost:8000/api/products/${id}`)
 
             dispatch({
                 type: PRODUCT_DETAILS_SUCCESS,
@@ -134,7 +134,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.delete(
-            `https://arcane-mountain-49926.herokuapp.com/api/products/delete/${id}/`,
+            `http://localhost:8000/api/products/delete/${id}/`,
             config
         )
 
@@ -174,7 +174,7 @@ export const createProduct = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.post(
-            `https://arcane-mountain-49926.herokuapp.com/api/products/create/`,
+            `http://localhost:8000/api/products/create/`,
             {},
             config
         )
@@ -214,7 +214,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `https://arcane-mountain-49926.herokuapp.com/api/products/update/${product._id}/`,
+            `http://localhost:8000/api/products/update/${product._id}/`,
             product,
             config
         )
@@ -258,7 +258,7 @@ export const createProductReview = (productId, review) => async (dispatch, getSt
         }
 
         const { data } = await axios.post(
-            `https://arcane-mountain-49926.herokuapp.com/api/products/${productId}/reviews/`,
+            `http://localhost:8000/api/products/${productId.id}/reviews/`,
             review,
             config
         )

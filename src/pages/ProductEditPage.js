@@ -39,7 +39,7 @@ function ProductEditScreen() {
         
         if (successUpdate) {
             dispatch({ type: PRODUCT_UPDATE_RESET })
-            navigate('/admin/productlist')
+            navigate('/thue/admin/productlist')
             console.log(productId)
         } else {
             if (!product.name || product._id !== Number(productId.id)) {
@@ -104,7 +104,7 @@ function ProductEditScreen() {
 
     return (
         <div>
-            <Link to='/admin/userlist'>
+            <Link to='/thue/admin/productlist'>
                 <Button className='btn btn-outline-light' data-bs-placement="right">
                     Go Back
                 </Button>
@@ -218,7 +218,7 @@ function ProductEditScreen() {
                             </Form.Group>
 
 
-                            <Button type='submit' variant='primary'>
+                            <Button type='submit' variant='primary' className='btn btn-success btn-bottom'>
                                 Update
                             </Button>
 

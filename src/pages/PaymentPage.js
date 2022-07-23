@@ -17,14 +17,14 @@ function PaymentPage() {
     const [paymentMethod, setPaymentMethod] = useState('PayPal')
 
     if (!shippingAddress.address) {
-        navigate('/shipping')
+        navigate('/thue/shipping')
     }
 
     const submitHandler = (e) => {
         e.preventDefault()
         console.log('payment method saved')
         dispatch(savePaymentMethod(paymentMethod))
-        navigate('/placeorder')
+        navigate('/thue/placeorder')
     }
 
     return (

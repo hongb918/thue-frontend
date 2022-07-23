@@ -28,12 +28,20 @@ h2 {
   text-align: center;
 }
 
+.btn-create {
+  margin-left: 50vh;
+}
 
+.btn-bottom {
+  padding-top: 2vh;
+  margin-top: 2rem;
+}
 /* carousel */
 
 .carousel-container {
   /* background-color: rgba(160, 176, 162, 0.36); */
-  margin: 2rem 0
+  margin: 2rem 0;
+  border: solid 5px #bed1e6;
 }
 
 
@@ -48,7 +56,12 @@ h2 {
 }
 
 .carousel-caption h4 {
-  color: rgb(113, 125, 130);
+  font-size: 30px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, rgba(55,94,148,.15), rgba(13, 42, 83, 0.735));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .carousel img {
@@ -72,4 +85,12 @@ h2 {
 
 .text-decoration {
   text-decoration: none;
+}
+
+.brand {
+  margin-left: auto;
+  margin-right: auto;
+  width: 25rem;
+  letter-spacing: .5rem;
+  font-size: large;
 }

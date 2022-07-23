@@ -26,12 +26,12 @@ function PlaceOrderPage() {
     cart.totalPrice = (Number(cart.itemsPrice) + Number(cart.shippingPrice) + Number(cart.taxPrice)).toFixed(2)
 
     if (!cart.paymentMethod) {
-        navigate('/payment')
+        navigate('/thue/payment')
     }
 
     useEffect(() => {
         if (success) {
-            navigate(`/order/${order._id}`)
+            navigate(`/thue/order/${order._id}`)
             dispatch({type: ORDER_CREATE_RESET})
         }
         
@@ -91,7 +91,7 @@ function PlaceOrderPage() {
                                                 </Col>
 
                                                 <Col>
-                                                    <Link to={`/products/${item.product}`}>{item.name}</Link>
+                                                    <Link to={`/thue/products/${item.product}`}>{item.name}</Link>
                                                 </Col>
 
                                                 <Col md={4}>
@@ -165,13 +165,3 @@ function PlaceOrderPage() {
 }
 
 export default PlaceOrderPage
-
-// import React from 'react'
-
-// function PlaceOrderPage() {
-//     return (
-//         <div>PlaceOrderPage</div>
-//     )
-// }
-
-// export default PlaceOrderPage

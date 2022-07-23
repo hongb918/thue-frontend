@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Button, Form, FormControl } from 'react-bootstrap'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { searchProducts, listProducts } from '../actions/productActions'
+import {searchProducts} from '../actions/productActions'
 function SearchBox() {
 
 
@@ -14,11 +14,11 @@ function SearchBox() {
     const submitHanldler = (e) => {
         e.preventDefault()
         if (keyword) {
-            navigate(`/?keyword=${keyword}`)
-            dispatch(searchProducts(keyword))
-            console.log(keyword)
+            navigate(`/thue/?keyword=${keyword}`)
+            // dispatch(searchProducts(keyword))
+            // console.log(keyword)
         } else {
-            console.error('Please enter keyword')
+            console.log('Please enter a keyword')
         }
     }
 

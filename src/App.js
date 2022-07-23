@@ -18,6 +18,7 @@ import UserListPage from './pages/UserListPage'
 import UserEditPage from './pages/UserEditPage'
 import ProductListPage from './pages/ProductListPage'
 import ProductEditPage from './pages/ProductEditPage'
+import SplashPage from './pages/SplashPage'
 
 
 function App() {
@@ -27,28 +28,29 @@ function App() {
       <main className='py-3'>
         <Container>
           <Routes>
-            <Route exact path='/' element={<HomePage />} />
-            <Route exact path='/login' element={< LoginPage />} />
-            <Route exact path='/register' element={< RegisterPage />} />
-            <Route exact path='/profile' element={< ProfilePage />} />
+            <Route exact path='/' element={<SplashPage />} />
+            <Route exact path='/thue' element={<HomePage />} />
+            <Route exact path='/thue/login' element={< LoginPage />} />
+            <Route exact path='/thue/register' element={< RegisterPage />} />
+            <Route exact path='/thue/profile' element={< ProfilePage />} />
 
             <Route
-              path="/login/shipping"
-              element={<Navigate to="/shipping" />}
+              path="/thue/login/shipping"
+              element={<Navigate to="/thue/shipping" />}
             />
 
-            <Route exact path='/shipping' element={< ShippingPage />} />
-            <Route exact path='/payment' element={< PaymentPage />} />
-            <Route exact path='/placeorder' element={< PlaceOrderPage />} />
-            <Route exact path='/cart' element={< CartPage />} />
-            <Route exact path='/products/:id' element={< ProductPage />} />
-            <Route exact path='/cart/:productId' element={< CartPage />} />
-            <Route exact path='/order/:id' element={< OrderPage />} />
+            <Route exact path='/thue/shipping' element={< ShippingPage />} />
+            <Route exact path='/thue/payment' element={< PaymentPage />} />
+            <Route exact path='/thue/placeorder' element={< PlaceOrderPage />} />
+            <Route exact path='/thue/cart' element={< CartPage />} />
+            <Route exact path='/thue/products/:id' element={< ProductPage />} />
+            <Route exact path='/thue/cart/:productId' element={< CartPage />} />
+            <Route exact path='/thue/order/:id' element={< OrderPage />} />
 
-            <Route exact path='/admin/userlist' element={< UserListPage />} />
-            <Route exact path='/admin/productlist' element={< ProductListPage />} />
-            <Route exact path='/admin/user/:id/edit' element={< UserEditPage />} />
-            <Route exact path='/admin/product/:id/edit' element={< ProductEditPage />} />
+            <Route exact path='/thue/admin/userlist' element={< UserListPage />} />
+            <Route exact path='/thue/admin/productlist' element={< ProductListPage />} />
+            <Route exact path='/thue/admin/user/:id/edit' element={< UserEditPage />} />
+            <Route exact path='/thue/admin/product/:id/edit' element={< ProductEditPage />} />
 
           </Routes>
         </Container>

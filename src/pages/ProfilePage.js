@@ -36,7 +36,7 @@ function ProfilePage() {
 
     useEffect(() => {
         if (!userInfo) {
-            navigate('/login')
+            navigate('/thue/login')
         } else {
             if (!user || !user.name || success || userInfo._id !== user._id) {
                 dispatch({ type: USER_UPDATE_PROFILE_RESET })
@@ -67,7 +67,7 @@ function ProfilePage() {
     // console.log(orders)
     return (
         <Row>
-            <Col md={3}>
+            <Col md={4}>
                 <h1>Update Profile</h1>
                 {message && <Message variant='danger'>{message}</Message>}
                 {error && <Message variant='danger'>{error}</Message>}
@@ -120,14 +120,15 @@ function ProfilePage() {
                         </Form.Control>
                     </Form.Group>
 
-                    <Button type='submit' variant='primary'>
+                    <Button type='submit' variant='primary' className='btn btn-success btn-bottom'>
                         Update
                     </Button>
                 </Form>
 
             </Col>
+            <Col md={1}></Col>
             {/* RIGHT SIDE MYORDERS */}
-            <Col md={5} >
+            <Col md={6} >
                 <h2>My Orders</h2>
                 {loadingOrders ? (
                     <Loader />
@@ -156,7 +157,7 @@ function ProfilePage() {
                                         <i className='fas fa-times' style={{ color: 'red' }}></i>
                                     )}</td>
                                     <td>
-                                        <LinkContainer to={`/order/${order._id}`}>
+                                        <LinkContainer to={`/thue/order/${order._id}`}>
                                             <Button className='btn-sm'>Details</Button>
                                         </LinkContainer>
                                     </td>

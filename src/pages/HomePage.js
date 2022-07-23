@@ -14,20 +14,20 @@ function HomePage() {
     const navigate = useNavigate()
     const location = useLocation()
     const dispatch = useDispatch()
-    const keyword = useParams()
+    const keyword = location.search
+    console.log(keyword)
 
     const productList = useSelector(state => state.productList)
 
     const { error, loading, products } = productList
 
     useEffect(() => {
-            dispatch(listProducts())
-    }, [dispatch])
-
+        dispatch(listProducts())
+    }, [dispatch, keyword])
     return (
         <div>
             {/* {!keyword && <ProductCarousel />} */}
-
+            <h1> Top Rated </h1>
             <ProductCarousel />
             <h1> Shop the Look </h1>
             {loading ? <Loader />

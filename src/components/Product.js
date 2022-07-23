@@ -9,11 +9,11 @@ function Product({ product }) {
 
     return (
         <Card className='mb-3 p-3 border-primary rounded' style={{ with: '20rem' }}>
-            <Link to={`/products/${product._id}`}>
+            <Link to={`/thue/products/${product._id}`}>
                 <Card.Img src={product.image} />
             </Link>
             <Card.Body>
-                <Link to={`/products/${product._id}`} className="text-decoration">
+                <Link to={`/thue/products/${product._id}`} className="text-decoration">
                     <Card.Header>
                         <h5>
                             {product.name}

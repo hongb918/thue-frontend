@@ -11,7 +11,7 @@ function CheckoutSteps({ step1, step2, step3, step4 }) {
             <Nav.Item>
                 {step1 ? (
                     //if user is not logged in, need to be logged in and proceeed...repeat for the remaining steps
-                    <LinkContainer to='/login'>
+                    <LinkContainer to='/thue/login'>
                         <Nav.Link>Login</Nav.Link>
                     </LinkContainer>
                 ) : (
@@ -22,7 +22,7 @@ function CheckoutSteps({ step1, step2, step3, step4 }) {
 
             <Nav.Item>
                 {step2 ? (
-                    <LinkContainer to='/shipping'>
+                    <LinkContainer to='/thue/shipping'>
                         <Nav.Link>Shipping</Nav.Link>
                     </LinkContainer>
                 ) : (
@@ -32,7 +32,7 @@ function CheckoutSteps({ step1, step2, step3, step4 }) {
 
             <Nav.Item>
                 {step3 ? (
-                    <LinkContainer to='/payment'>
+                    <LinkContainer to='/thue/payment'>
                         <Nav.Link>Payment</Nav.Link>
                     </LinkContainer>
                 ) : (
@@ -42,7 +42,7 @@ function CheckoutSteps({ step1, step2, step3, step4 }) {
 
             <Nav.Item>
                 {step4 ? (
-                    <LinkContainer to='/placeorder'>
+                    <LinkContainer to='/thue/placeorder'>
                         <Nav.Link>Place Order</Nav.Link>
                     </LinkContainer>
                 ) : (

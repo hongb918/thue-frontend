@@ -23,7 +23,7 @@ function ShippingPage() {
     const submitHandler = (e) => {
         e.preventDefault()
         dispatch(saveShippingAddress({ address, city, postalCode, country }))
-        navigate('/payment')
+        navigate('/thue/payment')
         console.log('submitted for shipping')
     }
 
