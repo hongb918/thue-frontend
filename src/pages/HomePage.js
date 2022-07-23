@@ -29,7 +29,7 @@ function HomePage() {
             {/* {!keyword && <ProductCarousel />} */}
             <h1> Top Rated </h1>
             <ProductCarousel />
-            <h1> Shop the Look </h1>
+            <h1> Shop All Furniture </h1>
             {loading ? <Loader />
                 : error ? <Message variant='danger'>{error}</Message>
                     :
