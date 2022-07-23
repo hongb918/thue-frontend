@@ -1,9 +1,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  ![relaxing](https://user-images.githubusercontent.com/95890211/180605320-0b3e6e88-4392-4437-972a-96677decd0bb.png)
 
-    <img src="[relaxing](https://user-images.githubusercontent.com/95890211/180605320-0b3e6e88-4392-4437-972a-96677decd0bb.png)" alt="Logo" width="80" height="80">
+
+![Logo](https://user-images.githubusercontent.com/95890211/180608013-ed2fa817-9498-414a-8b1a-a00e5f993718.png)
+    
   
 
   <h3 align="center">Thue</h3>
@@ -52,15 +53,9 @@ An e-commerce web application built with Django and React. This site allows user
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Django][Django]][Django-url]
-* [![React][React.js]][React-url]
-* [![Python][Python]][Python-url]
-* [![PostGres][PostGres]][PostGres-url]
-* [![JWT][JWT.io][JWT-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![PayPal][React-Paypal.js]][Paypal-url]
+
+[![My Skills](https://skills.thijs.gg/icons?i=python,react,django,postgres)](https://skills.thijs.gg)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
