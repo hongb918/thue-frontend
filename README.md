@@ -121,7 +121,7 @@ CRUD
 - [x] Full CRUD functionality on frontend + backend
 - [x] Product Carousel
 - [ ] SearchBar
-- [ ] Filter by Rooms
+- [ ] Filtered by Rooms
 - [ ] Flatpickr
 
 
